@@ -29,6 +29,24 @@ header {
     z-index: 2000;
 }
 
+.videos {
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    transition: all 1s;
+    background-color: #F1F1F1;
+    z-index: 3000;
+}
+
+.infos {
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    transition: all 1s;
+    background-color: #F1F1F1;
+    z-index: 4000;
+}
+
 .hidden{
     height: 0vh;
     transition: all 1s;
