@@ -1,4 +1,7 @@
-html { overflow-y: hidden; }
+html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 
 header {
     height: 100vh;
@@ -66,4 +69,193 @@ header {
     100% {
         height: 0;
     }
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————————— */
+/* Les règles suivantes concernent le menu en ligne visible sur la première slide des pages */
+
+#menu-row {
+    height: 11vh;
+    line-height: 11vh;
+    white-space: nowrap;
+}
+
+.nav-item {
+    color: #F1F1F1;
+    font-size: 4vh;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    opacity: 0.8;
+    font-family: Raleway;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 2vh;
+    left: 0;
+    background: rgb(222,92,56);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————————— */
+/* Les règles suivantes concernent les points permettant de savoir sur quel 'slide' on se situe */
+
+.point-menu {
+     position: absolute;
+     right: 0;
+     top: 35vh;
+     bottom:35vh;
+     left: 95vw;
+}
+
+.menu-point {
+    height: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: -48vw;
+}
+
+/*.menu-point:hover {
+    cursor: pointer;
+}*/
+
+.point-1 {
+    top: 35vh;
+}
+
+.point-2 {
+    top: 41vh;
+}
+
+.point-3 {
+    top: 47vh;
+}
+
+.point-4 {
+    top: 53vh;
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————————— */
+/* Les règles suivantes concernent le menu "navbar" se situant sur la droite de l'écran au survole des points */
+
+#navbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.5s;
+    background-color: #CCCCCC;
+    z-index: 100000;
+}
+
+.closed-navbar{
+    left: 100vw;
+}
+
+.open-navbar{
+    left: 80vw;
+    transition: all 0.5s;
+}
+
+#navbar-elements {
+    text-align: center;
+    margin-top: 25vh;
+}
+
+.navbar-element {
+    height: 10vh;
+    line-height: 10vh;
+    white-space: nowrap;
+}
+
+.navbar-element:hover {
+    cursor: pointer;
+}
+
+.nav-item2 {
+    color: #F1F1F1;
+    font-size: 2vw;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    opacity: 0.8;
+    font-family: Raleway;
+}
+
+.nav-item2::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 2vh;
+    left: 0;
+    background: rgb(222,92,56);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-item2:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————————— */
+/* Les règles suivantes concernent le bouton burger situé en haut à droit de la page */
+
+.burger {
+    position: absolute;
+    right: 2vh;
+    top: 2vh;
+    width: 7vh;
+    height: 7vh;
+    overflow: hidden;
+    z-index: 7000;
+    cursor: pointer;
+}
+
+.burger-line-wrap {             /* Style des lignes horizontales*/
+    left: 2vh;
+    width: 3vh;
+    right: 2vh;
+    position: absolute;
+    height: 0.1vh;
+    transition: width 0.4s;
+}
+
+.burger-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.burger-line-dark {
+    background: black;
+}
+
+.burger-line-wrap-0 {
+    top: 4.5vh;
+}
+
+.burger-line-wrap-1 {
+    top: 3.5vh;
+}
+
+.burger-line-wrap-2 {
+    top: 2.5vh;
 }

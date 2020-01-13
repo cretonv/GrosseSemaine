@@ -3,6 +3,8 @@ var is_animating = false;
 var header = document.querySelector('header')
 var pages = document.querySelectorAll('.pages')
 
+var navbar = document.querySelector('#navbar')
+
 function intro_appear(){
     //header.classList.add('close')
     from_bottom(0);
@@ -77,3 +79,21 @@ window.addEventListener("mousewheel", function(event) {
         }
     }
 })
+
+/* Les fonctions suivantes concernent l'apparition de la navbar */
+
+function navbarappear() {
+    navbar.classList.remove('closed-navbar')
+    navbar.classList.add('open-navbar')
+}
+
+function navbardisappear() {
+    navbar.classList.remove('open-navbar')
+    navbar.classList.add('closed-navbar')
+}
+
+/* Les fonctions suivantes concernent les changements de pages depuis la navbar */
+
+function nav_accueil() {
+
+}
