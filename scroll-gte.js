@@ -6,6 +6,7 @@ var pages = document.querySelectorAll('.pages')
 var navbar = document.querySelector('#navbar')
 var navbar_statut = false;
 
+
 function intro_appear(){
     //header.classList.add('close')
     from_bottom(0);

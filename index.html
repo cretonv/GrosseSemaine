@@ -11,19 +11,19 @@
     <div id="navbar" class="closed-navbar">
         <div id="navbar-elements" class="row">
             <div class="col-12 navbar-element">
-                <span class="nav-item2" onclick="nav_accueil()">ACCEUIL</span>
+                <span class="nav-item2">GEII</span>
             </div>
             <div class="col-12 navbar-element">
-                <span class="nav-item2" onclick="nav_first_element()">TRUC 1 </span>
+                <span class="nav-item2">GMP</span>
             </div>
             <div class="col-12 navbar-element">
-                <span class="nav-item2" onclick="nav_second_element()">TRUC 2 </span>
+                <span class="nav-item2">GTE</span>
             </div>
             <div class="col-12 navbar-element">
-                <span class="nav-item2" onclick="nav_third_element()">VIDÉO </span>
+                <span class="nav-item2">CHIMIE </span>
             </div>
             <div class="col-12 navbar-element">
-                <span class="nav-item2" onclick="nav_fourth_element()">INFORMATIONS </span>
+                <span class="nav-item2">GCCD </span>
             </div>
         </div>
     </div>
@@ -53,13 +53,171 @@
             </div>
             <div id="arrow" class="col-12">
                 <div class="row">
-                    <div class="col-6"></div>
-                    <div class="col-3"></div>
-                    <div class="col-6"></div>
+                    <div class="col-4"></div>
+                    <div class="col-4 fleche-container">
+                        <div class="fleche" style="background-image: url('./images/fleche.svg')" onclick="intro_appear()"></div>
+                    </div>
+                    <div class="col-4"></div>
                 </div>
             </div>
         </div>
     </header>
 
+    <div class="intro pages close container-fluid" onmouseover="navbar_hidden()">
+        <div class="burger" onclick="navbarappear()">
+            <div class="burger-line-wrap-0 burger-line-wrap oh">
+                <div class="burger-line burger-line-dark" style="transform: translate3d(0%, 0px, 0px); transition: width 0.9s; width: 3vh;"></div>
+            </div>
+            <div class="burger-line-wrap-1 burger-line-wrap oh">
+                <div class="burger-line burger-line-dark" style="transform: translate3d(0%, 0px, 0px); transition: width 0.7s; width: 3vh;"></div>
+            </div>
+            <div class="burger-line-wrap-2 burger-line-wrap oh">
+                <div class="burger-line burger-line-dark" style="transform: translate3d(0%, 0px, 0px); transition: width 0.5s; width: 3vh;"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 slide-title">
+
+            </div>
+        </div>
+        <div id="plat-intros" class="row">
+                <div class="col-1"></div>
+                <div class="col-2">
+                    <div class="row">
+                        <div class="col-12 text-center plat-name">
+                            GEII
+                        </div>
+                        <div class="col-12 text-center plat-name">
+                            GEII
+                        </div>
+                        <div class="col-12 text-center plat-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="col-12 button-container">
+                            <div class="home_button mx-auto" onclick="popup_appear(0)">
+                                <a id="button1" class="link button">Plus d'informations</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row">
+                        <div class="col-12 text-center plat-name">
+                            GMP
+                        </div>
+                        <div class="col-12 text-center plat-name">
+                            GEII
+                        </div>
+                        <div class="col-12 text-center plat-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="col-12 button-container">
+                            <div class="home_button mx-auto" onclick="popup_appear(0)">
+                                <a id="button2" class="link button" href="#">Plus d'informations</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row">
+                        <div class="col-12 text-center plat-name">
+                            GTE
+                        </div>
+                        <div class="col-12 text-center plat-name">
+                            GEII
+                        </div>
+                        <div class="col-12 text-center plat-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="col-12 button-container">
+                            <div class="home_button mx-auto" onclick="popup_appear(0)">
+                                <a class="link button button1">Plus d'informations</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row">
+                        <div class="col-12 text-center plat-name">
+                            CHIMIE
+                        </div>
+                        <div class="col-12 text-center plat-name">
+                            GEII
+                        </div>
+                        <div class="col-12 text-center plat-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="col-12 button-container">
+                            <div class="home_button mx-auto" onclick="popup_appear(0)">
+                                <a class="link button button1">Plus d'informations</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row">
+                        <div class="col-12 text-center plat-name">
+                            GCCD
+                        </div>
+                        <div class="col-12 text-center plat-name">
+                            GEII
+                        </div>
+                        <div class="col-12 text-center plat-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="col-12 button-container">
+                            <div class="home_button mx-auto" onclick="popup_appear(0)">
+                                <a class="link button button1">Plus d'informations</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+        </div>
+
+    </div>
+
+    <div class="pop-up hidden-pop-up">
+        <div class="cross" onclick="popup_disappear(0)">
+            <div id="burger-close-wrap-0" class="burger-close-wrap oh" style = "transition: width 0.7s 1s; width: 5vh;"> </div>
+            <div id="burger-close-wrap-1" class="burger-close-wrap oh" style = "transition: width 0.7s 1s; width: 5vh;"> </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 pop-up-photo" style="background-image: url('./images/slider-images/image3.JPG')">
+
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-12 pop-up-title">
+                            GTE
+                        </div>
+                        <div class="col-12 pop-up-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum ullamcorper hendrerit. Cras ornare interdum eros eu aliquam. Donec a nulla ac neque vestibulum mollis non nec erat. In ut viverra augue. Vivamus sit amet est at ipsum efficitur sagittis ac et felis. Praesent tempus vel eros sed malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Vestibulum interdum ipsum a magna varius, in faucibus eros pellentesque. Nulla a nisi consectetur, laoreet nulla in, varius est. Pellentesque id augue fermentum, bibendum nibh sed, facilisis diam. Phasellus id nisl semper, tempus orci vel, facilisis nisi. Cras fermentum mi eget orci tristique, vitae vestibulum nisi euismod. Nam suscipit interdum leo. Donec tincidunt tellus id gravida suscipit. Donec justo sem, varius sit amet risus vel, accumsan commodo risus.
+
+                            Ut accumsan nisi non dignissim congue. Sed facilisis gravida molestie. Curabitur viverra ex ex, non mattis odio pharetra nec. Etiam dolor metus, placerat eget lorem quis, porttitor fermentum lacus. Proin in libero eu mauris semper pretium. Maecenas posuere odio sed magna scelerisque, vitae interdum ante porttitor. Praesent egestas ac enim id lacinia. Maecenas vestibulum purus ut diam dapibus venenatis. Donec pretium dolor ligula. Nam dignissim mollis eleifend. Maecenas in velit vel lectus aliquet.
+                        </div>
+                        <div class="col-12 pop-up-buttons">
+                            <div class="row">
+                                <div class="col-6 button-container">
+                                    <div class="home_button mx-auto">
+                                        <a class="link button button2" href="#">Plus d'informations sur la plateforme</a>
+                                    </div>
+                                </div>
+                                <div class="col-6 button-container">
+                                    <div class="home_button mx-auto">
+                                        <a class="link button button1" href="#">Plus d'informations sur le département</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./scroll-index.js"></script>
 </body>
 </html>
