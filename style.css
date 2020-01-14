@@ -318,11 +318,22 @@ header {
     height: 50vh;
 }
 
+.img-slider{
+    height: 50vh;
+    width: 66.67vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
 .slider-img{
     background-size: cover;
     background-position: center;
     height: 50vh;
-    widht: 66.67vh;
+    width: 66.67vh;
+}
+
+.hidden-img {
+    opacity: 0;
 }
 
 /* ———————————————————————————————————————————————————————————————————————————————————————— */
@@ -358,15 +369,26 @@ header {
 }
 
 #logo-row {
-    height: 39vh;
+    height: 29vh;
+}
+
+#logo{
+    height: 29vh;
+    background-image: url("./images/logo.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #cta-row {
-    height: 40vh;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .cta-text {
-    height: 40vh;
+    height: 45vh;
     background-color: #F1F1F1;
     border-radius: 8px;
 

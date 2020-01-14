@@ -6,6 +6,8 @@ var pages = document.querySelectorAll('.pages')
 var navbar = document.querySelector('#navbar')
 var navbar_statut = false;
 
+var slider_images = document.querySelectorAll('.slider-img');
+var active_img = 0;
 
 function intro_appear(){
     //header.classList.add('close')
@@ -193,4 +195,13 @@ function nav_fourth_element() {
     from_bottom(2);
     from_bottom(3);
 }
+
+function slide(){
+    slider_images[active_img].classList.add('hidden-img');
+    slider_images[active_img].classList.remove('visible-img')
+    active_img ++
+    slider_images[active_img].classList.remove('hidden-img')
+    slider_images[active_img].classList.add('visible-img')
+}
+
 
