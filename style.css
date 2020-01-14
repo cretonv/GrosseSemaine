@@ -5,7 +5,6 @@ html {
 
 header {
     height: 100vh;
-    background-image: url('./images/home2.jpg');
     background-size: cover;
     background-position: bottom;
     z-index: 0;
@@ -276,4 +275,78 @@ header {
 
 .burger-line-wrap-2 {
     top: 2.5vh;
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————————— */
+/* ———————————————————————————————————————————————————————————————————————————————————————— */
+/* ———————————————————————————————————————————————————————————————————————————————————————— */
+/* Les règles suivantes concernent le layout des slides */
+
+.slide-title {
+    height: 10vh;
+    text-align: center;
+    font-size: 3vw;
+}
+
+/*#title-GTE {
+    position: relative;
+    left: -2vw;
+}*/
+
+.slider-photos {
+    height: 50vh;
+}
+
+.slider-img{
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    widht: 66.67vh;
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————————— */
+/* ———————————————————————————————————————————————————————————————————————————————————————— */
+/* ———————————————————————————————————————————————————————————————————————————————————————— */
+/* Les règles suivantes concernent la slide d'acceuil de la page d'acceuil*/
+
+.nav-item-3 {
+    color: #F1F1F1;
+    font-size: 4vh;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-family: Raleway;
+}
+
+.nav-item-3::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 2vh;
+    left: 0;
+    background: rgb(222,92,56);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-item-3:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#logo-row {
+    height: 39vh;
+}
+
+#cta-row {
+    height: 40vh;
+}
+
+.cta-text {
+    height: 40vh;
+    background-color: #F1F1F1;
+    border-radius: 8px;
+
 }
