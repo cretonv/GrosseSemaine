@@ -46,6 +46,7 @@ window.addEventListener("mousewheel", function(event) {
 
     if (scrollDown) {
         if (!is_animating && !block_scroll) {
+            navbardisappear()
             if (compteur_scroll == 0) {
                 intro_appear()
                 compteur_scroll++
@@ -55,6 +56,7 @@ window.addEventListener("mousewheel", function(event) {
         }
     } else if (scrollUp) {
         if(!is_animating && !block_scroll) {
+            navbardisappear()
             if (compteur_scroll == 1) {
                 intro_disappear()
                 compteur_scroll--

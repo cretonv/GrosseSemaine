@@ -1,6 +1,47 @@
+/* Importation des fontes */
+
+@font-face {
+    font-family: Geo;
+    src: url("./lib/font/geo_sans_light/GeosansLight.ttf");
+}
+
+@font-face {
+    font-family: Geo;
+    src: url("./lib/font/geo_sans_light/GeosansLight-Oblique.ttf");
+    font-style: oblique;
+}
+
+@font-face {
+    font-family: Lemon-milk;
+    src: url("./lib/font/lemon_milk/LemonMilk.otf");
+}
+
+@font-face {
+    font-family: Lemon-milk;
+    src: url("./lib/font/lemon_milk/LemonMilkbold.otf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Lemon-milk-light;
+    src: url("./lib/font/lemon_milk/LemonMilklight.otf");
+}
+
+@font-face {
+    font-family: Lemon-milk;
+    src: url("./lib/font/lemon_milk/LemonMilkitalic.otf");
+    font-style: italic;
+}
+
+
+/*------------------------------------*/
 html {
     overflow-x: hidden;
     overflow-y: hidden;
+}
+
+li, ul {
+    list-style: none;
 }
 
 header {
@@ -125,7 +166,7 @@ header {
     display: inline-block;
     position: relative;
     opacity: 0.8;
-    font-family: Raleway;
+    font-family: Lemon-milk;
 }
 
 .nav-item::after {
@@ -162,8 +203,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    right: -48vw;
+    position: absolute;
+    right: 2vh;
 }
 
 /*.menu-point:hover {
@@ -230,7 +271,7 @@ header {
     display: inline-block;
     position: relative;
     opacity: 0.8;
-    font-family: Raleway;
+    font-family: Lemon-milk;
 }
 
 .nav-item2::after {
@@ -307,6 +348,9 @@ header {
     height: 10vh;
     text-align: center;
     font-size: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /*#title-GTE {
@@ -315,7 +359,10 @@ header {
 }*/
 
 .slider-photos {
-    height: 50vh;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .img-slider{
@@ -334,6 +381,95 @@ header {
 
 .hidden-img {
     opacity: 0;
+}
+
+.slider-text {
+    height: 30vh;
+    font-size: 1.005vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#bouton-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 15vh;
+}
+
+.h-intro-left-wrap {
+    z-index: 1001;
+    margin-left: 2vh;
+    width: 100vh;
+    font-size: calc(.42rem + .42vw);
+    transform-origin: top left;
+    transform: rotate(-90deg) translate3d(-100%,0,0);
+}
+
+.h-intro-left-right {
+    position: absolute;
+    top: 0;
+    right: 5vh;
+    color: black;
+    font-family: Lemon-milk;
+    font-size: 3vh;
+}
+
+/* Règles de style pour la page informations */
+
+.infos-title {
+    height: 13vh;
+    font-size: 2vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Lemon-milk-light;
+}
+
+.layout-border {
+    position: absolute;
+    opacity: 0.5;
+}
+
+.layout-border-right {
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 1px;
+    background: black;
+    opacity: 0.7;
+}
+
+.infos-map {
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-infos {
+    height: 35vh;
+    width: 30vw;
+}
+
+.contact-row {
+    height: 10vh;
+    font-family: Geo;
+    font-size: 1.3vw;
+}
+
+.contact-mail {
+     color: #333333;
+ }
+
+.contact-mail:hover {
+    color: #333333;
+}
+
+.infos-button {
+    height: 16vh;
 }
 
 /* ———————————————————————————————————————————————————————————————————————————————————————— */
@@ -391,7 +527,20 @@ header {
     height: 45vh;
     background-color: #F1F1F1;
     border-radius: 8px;
+    padding: 1.5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.cta-typo {
+    font-size: 1.2vw;
+}
+
+.phrase-importante {
+    font-weight: bold;
+    color: #DE6C38;
 }
 
 /* ———————————————————————————————————————————————————————————————————————————————————————— */

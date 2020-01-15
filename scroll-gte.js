@@ -6,8 +6,10 @@ var pages = document.querySelectorAll('.pages')
 var navbar = document.querySelector('#navbar')
 var navbar_statut = false;
 
-var slider_images = document.querySelectorAll('.slider-img');
-var active_img = 0;
+var popups = document.querySelectorAll('.pop-up')
+var popup_active;
+var block_scroll = false;
+var popup_open = false;
 
 function intro_appear(){
     //header.classList.add('close')
@@ -73,7 +75,8 @@ window.addEventListener("mousewheel", function(event) {
     console.log(compteur_scroll)
 
     if (scrollDown) {
-        if (!is_animating) {
+        if (!is_animating && !block_scroll) {
+            navbardisappear()
             if (compteur_scroll == 0) {
                 intro_appear()
                 compteur_scroll++
@@ -97,7 +100,8 @@ window.addEventListener("mousewheel", function(event) {
             }
         }
     } else if (scrollUp) {
-        if(!is_animating) {
+        if(!is_animating && !block_scroll) {
+            navbardisappear()
             if (compteur_scroll == 1) {
                 intro_disappear()
                 compteur_scroll--
@@ -130,7 +134,9 @@ function nav_statut_evol(){
 }
 
 function navbarappear() {
-    console.log('littleton')
+    if(popup_open) {
+        popup_disappear(popup_active);
+    }
     navbar.classList.remove('closed-navbar')
     navbar.classList.add('open-navbar')
     navbar_statut = true;
@@ -175,6 +181,7 @@ function nav_second_element() {
     for(var i = pages.length - 1; i >= 2; i--) {
         from_top(i);
     }
+    from_bottom(0);
     from_bottom(1);
 }
 
@@ -184,6 +191,7 @@ function nav_third_element() {
     for(var i = pages.length - 1; i >= 3; i--) {
         from_top(i);
     }
+    from_bottom(0);
     from_bottom(1)
     from_bottom(2);
 }
@@ -191,6 +199,7 @@ function nav_third_element() {
 function nav_fourth_element() {
     navbardisappear();
     compteur_scroll = 4;
+    from_bottom(0);
     from_bottom(1)
     from_bottom(2);
     from_bottom(3);
@@ -202,6 +211,24 @@ function slide(){
     active_img ++
     slider_images[active_img].classList.remove('hidden-img')
     slider_images[active_img].classList.add('visible-img')
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————————— */
+/* Code JS pour l'apparition de la pop-up sur la page */
+
+function popup_appear(selector) {
+    popups[selector].classList.remove('hidden-pop-up')
+    popups[selector].classList.add('visible-pop-up')
+    block_scroll = true;
+    popup_active = selector;
+    popup_open = true;
+}
+
+function popup_disappear(selector) {
+    popups[selector].classList.remove('visible-pop-up')
+    popups[selector].classList.add('hidden-pop-up')
+    block_scroll = false;
+    popup_open = false;
 }
 
 
