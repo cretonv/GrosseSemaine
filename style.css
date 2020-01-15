@@ -1,3 +1,14 @@
+/* Variables css */
+
+
+:root {
+    --gte-color: #E84E0F;
+    --gccd-color: #6ED059;
+    --chimie-color: #903AA5;
+    --geii-color: #F9D523;
+    --gmp-color: #238CC1;
+}
+
 /* Importation des fontes */
 
 @font-face {
@@ -177,7 +188,7 @@ header {
     height: 3px;
     bottom: 2vh;
     left: 0;
-    background: rgb(222,92,56);
+    background: var(--gte-color);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -185,6 +196,40 @@ header {
 .nav-item:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+.picto-accueil {
+    margin-top: 3vh;
+    height: 35vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#ligne-vide-accueil {
+    height: 27vh;
+}
+
+.cta-accueil {
+    margin-top: 5vh;
+    height: 30vh;
+    font-family: Geo;
+    font-size: 4vw;
+    text-align: center;
+    color: #F1F1F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fleche2{
+    height: 10vh;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    cursor: pointer;
 }
 
 /* ———————————————————————————————————————————————————————————————————————————————————————— */
@@ -288,6 +333,34 @@ header {
 }
 
 .nav-item2:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav-item2-gte {
+    color: #F1F1F1;
+    font-size: 2vw;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    opacity: 0.8;
+    font-family: Lemon-milk;
+}
+
+.nav-item2-gte::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 2vh;
+    left: 0;
+    background: var(--gte-color);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-item2-gte:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
@@ -472,6 +545,111 @@ header {
     height: 16vh;
 }
 
+.picto-container{
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    height: 25vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    transform: scale(0.9);
+    filter: grayscale(100%);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.picto-container:hover {
+    transition: all 0.5s;
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.ligne-vide-infos {
+    height: 10vh;
+}
+
+/* règles pour l'article affiché par la pop-up de la page information */
+
+.article-container {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.bloc-text-medium {
+    height: 58vh;
+    font-family: Geo;
+    font-size: 1.2vw;
+    text-align: justify;
+}
+
+.bloc-photos{
+    height: 33vh;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bloc-photos-max{
+    height: 50vh;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.special-text{
+    text-align: left;
+}
+
+.bloc-text-max {
+    height: 92vh;
+    font-family: Geo;
+    font-size: 1.2vw;
+    text-align: justify;
+}
+
+.bloc-text-mini {
+    height: 35vh;
+    font-family: Geo;
+    font-size: 1.2vw;
+    text-align: justify;
+}
+
+.ligne-vide-article{
+
+}
+
+#bloc-photos1 {
+    margin-top: 1vh;
+}
+
+#bloc-photos2 {
+    margin-top: 5vh;
+}
+
+.bold-corps {
+    font-weight: bold;
+}
+
+.element-important-gte {
+    color: var(--gte-color)
+}
+
+/* Règles de style pour la page vidéo */
+
+.video-container{
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video {
+    height: 35vh;
+    width: 60.21vh;
+}
+
 /* ———————————————————————————————————————————————————————————————————————————————————————— */
 /* ———————————————————————————————————————————————————————————————————————————————————————— */
 /* ———————————————————————————————————————————————————————————————————————————————————————— */
@@ -543,6 +721,11 @@ header {
     color: #DE6C38;
 }
 
+.phrase-importante2 {
+    font-weight: bold;
+    color: var(--gte-color);
+}
+
 /* ———————————————————————————————————————————————————————————————————————————————————————— */
 /* Style de la première slide d'intro */
 
@@ -555,6 +738,8 @@ header {
     margin-bottom: 2vh;
     cursor: pointer;
 }
+
+
 
 .plat-intros {
     height: 80vh;
@@ -618,6 +803,13 @@ a#button1:hover {
     transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
 }
 
+a.button1-gte:hover {
+    color: var(--gte-color);
+    box-shadow: #333333 0 0px 0px 40px inset;
+    transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
+}
+
+
 a.button1:hover {
     color: #DE6C38;
     box-shadow: #333333 0 0px 0px 40px inset;
@@ -636,14 +828,31 @@ a.button2:hover {
     transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
 }
 
+a.button2-gte:hover {
+    color: var(--gte-color);
+    box-shadow: #333333 0 80px 0px 2px inset;
+    transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
+}
 /* ———————————————————————————————————————————————————————————————————————————————————————— */
-/* Style des pop-up de la page d'accueil*/
+/* Style des pop-up de la page d'accueil et des pages spécialisés*/
 
 .pop-up {
     border-radius: 10px;
     position: absolute;
     top: 5vh;
     bottom: 5vh;
+    left: 5vw;
+    right: 5vw;
+    z-index: 3000;
+    background-color: #CCCCCC;
+    transition: all 0.5s;
+}
+
+.pop-up2 {
+    border-radius: 10px;
+    position: absolute;
+    top: 3vh;
+    bottom: 3vh;
     left: 5vw;
     right: 5vw;
     z-index: 3000;

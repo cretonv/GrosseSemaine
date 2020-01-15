@@ -6,7 +6,7 @@ var pages = document.querySelectorAll('.pages')
 var navbar = document.querySelector('#navbar')
 var navbar_statut = false;
 
-var popups = document.querySelectorAll('.pop-up')
+var popups = document.querySelectorAll('.pop-up2')
 var popup_active;
 var block_scroll = false;
 var popup_open = false;

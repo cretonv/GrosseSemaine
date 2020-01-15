@@ -7,6 +7,7 @@ var navbar = document.querySelector('#navbar')
 var navbar_statut = false;
 
 var popups = document.querySelectorAll('.pop-up')
+var popup_open = false;
 var popup_active;
 var block_scroll = false;
 
@@ -77,7 +78,9 @@ function navbarappear() {
     navbar.classList.remove('closed-navbar')
     navbar.classList.add('open-navbar')
     navbar_statut = true;
-    popup_disappear(popup_active);
+    if(popup_open) {
+        popup_disappear(popup_active);
+    }
     var intervalID = window.setTimeout(nav_statut_evol, 100);
 }
 
@@ -102,10 +105,12 @@ function popup_appear(selector) {
     popups[selector].classList.add('visible-pop-up')
     block_scroll = true;
     popup_active = selector;
+    popup_open = true;
 }
 
 function popup_disappear(selector) {
     popups[selector].classList.remove('visible-pop-up')
     popups[selector].classList.add('hidden-pop-up')
     block_scroll = false;
+    popup_open = false;
 }
