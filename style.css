@@ -650,6 +650,24 @@ header {
     width: 60.21vh;
 }
 
+#first-video-text {
+    text-align: right;
+}
+
+.video-text {
+    height: 20vh;
+    font-size: 1.2vw;
+    font-family: Geo;
+}
+
+.video-text:first-child {
+    text-align: right;
+}
+
+.ligne-vide-video {
+    height: 22vh;
+}
+
 /* ———————————————————————————————————————————————————————————————————————————————————————— */
 /* ———————————————————————————————————————————————————————————————————————————————————————— */
 /* ———————————————————————————————————————————————————————————————————————————————————————— */
@@ -745,12 +763,20 @@ header {
     height: 80vh;
 }
 
+.plat-logo {
+    height: 20vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
 .plat-name {
     font-size: 2vw;
     height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Lemon-milk;
 }
 
 .fleche-container {
@@ -758,10 +784,32 @@ header {
 }
 
 .plat-text {
-    height: 50vh;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: 1vw;
+    font-family: Geo;
+}
+
+.geii-color {
+    color: var(--geii-color);
+}
+
+.gmp-color {
+    color: var(--gmp-color);
+}
+
+.gte-color {
+    color: var(--gte-color);
+}
+
+.chimie-color {
+    color: var(--chimie-color);
+}
+
+.gccd-color {
+    color: var(--gccd-color);
 }
 
 .contact-content {                  /* Style des boutons */
@@ -804,11 +852,34 @@ a#button1:hover {
 }
 
 a.button1-gte:hover {
-    color: var(--gte-color);
-    box-shadow: #333333 0 0px 0px 40px inset;
+    color: #333333;
+    box-shadow: var(--gte-color) 0 0px 0px 40px inset;
     transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
 }
 
+a.button1-gccd:hover {
+    color: #333333;
+    box-shadow: var(--gccd-color) 0 0px 0px 40px inset;
+    transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
+}
+
+a.button1-chimie:hover {
+    color: #333333;
+    box-shadow: var(--chimie-color) 0 0px 0px 40px inset;
+    transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
+}
+
+a.button1-geii:hover {
+    color: #333333;
+    box-shadow: var(--geii-color) 0 0px 0px 40px inset;
+    transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
+}
+
+a.button1-gmp:hover {
+    color: #333333;
+    box-shadow: var(--gmp-color) 0 0px 0px 40px inset;
+    transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
+}
 
 a.button1:hover {
     color: #DE6C38;
@@ -830,6 +901,30 @@ a.button2:hover {
 
 a.button2-gte:hover {
     color: var(--gte-color);
+    box-shadow: #333333 0 80px 0px 2px inset;
+    transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
+}
+
+a.button2-gccd:hover {
+    color: var(--gccd-color);
+    box-shadow: #333333 0 80px 0px 2px inset;
+    transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
+}
+
+a.button2-chimie:hover {
+    color: var(--chimie-color);
+    box-shadow: #333333 0 80px 0px 2px inset;
+    transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
+}
+
+a.button2-geii:hover {
+    color: var(--geii-color);
+    box-shadow: #333333 0 80px 0px 2px inset;
+    transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
+}
+
+a.button2-gmp:hover {
+    color: var(--gmp-color);
     box-shadow: #333333 0 80px 0px 2px inset;
     transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
 }
@@ -890,6 +985,17 @@ a.button2-gte:hover {
     font-size: 3vw;
 }
 
+.pop-up-logo{
+    height: 18vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-right: 3vw;
+    padding-left: 3vw;
+    font-size: 3vw;
+    margin-top:2vh;
+}
+
 .pop-up-text {
       height: 55vh;
       text-align: center;
@@ -898,10 +1004,13 @@ a.button2-gte:hover {
       justify-content: center;
       padding-right: 3vw;
       padding-left: 3vw;
+      font-size: 1vw;
+      font-family: Geo;
 }
 
+
 .pop-up-buttons {
-    height: 20vh;
+    height: 15vh;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -928,13 +1037,13 @@ a.button2-gte:hover {
     background: white;
 }
 
-#burger-close-wrap-0 {
+.burger-close-wrap-0 {
     transform: rotate(45deg);
     top: 3.5vh;
     left: 2vh;
 }
 
-#burger-close-wrap-1 {
+.burger-close-wrap-1 {
     transform: rotate(-45deg);
     right: 2vh;
     top: 3.5vh;
